@@ -62,5 +62,11 @@ O arquivo inicial é o main.ts é lá que vamos definir o bootstrap da aplicaç�
 - templateUrl: arquivos de template do componente.
 - selector: indica onde o componente deve ser renderizado dentro do index.html .
 
+## Componentes
+- pequenas partes lógicas que podem ser utilizadas dentro da aplicação.
+- serve para controlar uma parte da tela, que chamamos de view.
+
+
+
 
 
