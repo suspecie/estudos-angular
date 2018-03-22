@@ -71,7 +71,7 @@ Instanciando componente como classe(cuidado com conflitos de nomes de classe css
 - template: é um metadado que permite informar um tamplate inline. 
 Dessa maneira não pode quebrar linha
 ``` template: '<p>Esse é o componente TOPO inline!</p>' ``` 
-Dessa outra maneira com `` podemos quebrar linhas para a forma inline
+Dessa outra maneira com podemos quebrar linhas para a forma inline
 ``` template: `<p>```
                 ``` Esse é o componente TOPO inline!</p>` ```
 - styles: permite informar através de arrays estilos css
@@ -100,6 +100,13 @@ Podendo também quebrar linha
     - ``` ng generate component nomedocomponente ``` ou ```ng g c nomedocomponente ```
     Para que nao seja criado determinado arquivo devemos passar um parametro na hora da geração
     ``` ng g c nomedocomponente --spec=false ``` nesse caso o arquivo spec n sera criado
+
+## Instalando o Bootstrap
+- http://getbootstrap.com/docs/4.0/getting-started/download/
+- Instalar como dependencia é uma opção boa.
+- feito isso devemos incluir o bootstrap como um style global, para isso temos que ir até o arquiv angular-cli.json e adicionar em "styles" o caminho do arquivo bootstrap.
+
+
 
 
 
