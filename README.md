@@ -45,6 +45,7 @@ Alguns problemas no momento do build podem ser resolvidos utilizando alguns mét
 - app.component.html: o html.
 - app.component.spec.ts: arquivo de teste.
 - app.component.css: arquivo css do componente.
+- é importante criarmos diretorios para organizar nossos componentes, isso deve ser feito dentro do diretorio app
 
 
 ## Como tudo funciona
@@ -61,10 +62,41 @@ O arquivo inicial é o main.ts é lá que vamos definir o bootstrap da aplicaç�
 - styleUrls: arquivos de estilo do componente.
 - templateUrl: arquivos de template do componente.
 - selector: indica onde o componente deve ser renderizado dentro do index.html .
+Instanciando componente no html
+```selector: 'app-topo' ``` no html ```<app-topo></app-topo>```
+Instanciando componente como atributo
+```selector: '[app-topo]' ``` no html ```<div app-topo></div>```
+Instanciando componente como classe(cuidado com conflitos de nomes de classe css)
+```selector: '.app-topo' ``` no html ```<div class="app-topo"></div>```
+- template: é um metadado que permite informar um tamplate inline. 
+Dessa maneira não pode quebrar linha
+``` template: '<p>Esse é o componente TOPO inline!</p>' ``` 
+Dessa outra maneira com ` podemos quebrar linhas para a forma inline
+``` template: `<p>```
+                ``` Esse é o componente TOPO inline!</p>` ```
+- styles: permite informar através de arrays estilos css
+``` styles: [' .exemplo { color:red }'] ```
+Podendo também quebrar linha
+``` styles: [` ```
+                ```.exemplo { color:red }```
+            ``` `] ```
 
 ## Componentes
+- O @Component é chamado de declaration
+- já os parametros, como selector por exemplo são chamados de metadados
+- Quando criamos um componente é muito importante ter um template associado a ele
 - pequenas partes lógicas que podem ser utilizadas dentro da aplicação.
 - serve para controlar uma parte da tela, que chamamos de view.
+- Criando manualmente
+    - criar um diretório para o componente dentro de app
+    - criar dentro desde novo diretorio o *.component.ts e *.component.html
+    - fazer import do Component
+    - definir a classe o nome deve ser nomeComponent 
+    - decorar essa classe com instrucoes para dizer ao angular que essa classe é um componente @Component()
+    - para conseguirmos usar o componente dentro do module que é carregado pela aplicação, precisamos importar dentro do app.module esse novo componente.
+    - tb é necessário declarar dentro do app.module o nosso componente
+    - instanciar nosso componente dentro de algum lugar na nossa aplicação
+
 
 
 
