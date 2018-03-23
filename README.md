@@ -46,6 +46,8 @@ Alguns problemas no momento do build podem ser resolvidos utilizando alguns mét
 - app.component.spec.ts: arquivo de teste.
 - app.component.css: arquivo css do componente.
 - é importante criarmos diretorios para organizar nossos componentes, isso deve ser feito dentro do diretorio app
+- shared: podemos criar uma pasta de compartilhamento para recurso compartilhados. Por exemplo uma classe que vai server como modelo de objetos para aplicação.
+Quando criamos uma classe que vai servir de modelo e nao é um componente utilizamos o *.model.ts
 
 
 ## Como tudo funciona
@@ -123,6 +125,10 @@ Podendo também quebrar linha
 - Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação.
 - @Input: Property binding do pai para filho.
 - @Output: Event binding de filho para o pai.
+
+## Mock
+- O mock contém instâncias dos objetos baseados na classe modelo.
+
 
 
 
