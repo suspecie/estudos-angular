@@ -122,6 +122,8 @@ Podendo também quebrar linha
     - Para capturar eventos do Template e utilizar no componente, utilizamos o Event binding.
         - Event Binding: ``` (event) = "expression" ```
             Atribuimos no HTML um determinado evento junto com uma expressao que é uma funcao que corresponde com um método da classe do componente.
+            Temos condicoes de recuperar eventos disparados no template e com isso executar métodos da classe do componete. input, click, focus, keyup e etc...
+            O evento input é disparado quando à alguma interacao em um campo de texto.
 - Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação.
 - @Input: Property binding do pai para filho.
 - @Output: Event binding de filho para o pai.
