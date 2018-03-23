@@ -127,7 +127,11 @@ Podendo também quebrar linha
             ``(input)="atualizaResposta()"``
             Já $event ``(input)="atualizaResposta($event)"`` captura o estado do elemento no DOM no momento que o evento é disparado.
             Quando possuimos um $event como parametro no nosso método temos que receber como parametro do tipo Event.
-- Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação.
+- Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação. Ou seja, nos temos uma ação originada do Template HTML que ao evoluir algum atributo da nossa classe impacte novamente no Template.
+Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para o html fazendo um String interpolation dessa resposta, o HTML vai esta tendo um novo impacto.
+`` this.resposta = ((<HTMLInputElement>resposta.target).value);``
+``<p> {{ resposta }} </p>``
+
 - @Input: Property binding do pai para filho.
 - @Output: Event binding de filho para o pai.
 
