@@ -124,6 +124,9 @@ Podendo também quebrar linha
             Atribuimos no HTML um determinado evento junto com uma expressao que é uma funcao que corresponde com um método da classe do componente.
             Temos condicoes de recuperar eventos disparados no template e com isso executar métodos da classe do componete. input, click, focus, keyup e etc...
             O evento input é disparado quando à alguma interacao em um campo de texto.
+            ``(input)="atualizaResposta()"``
+            Já $event ``(input)="atualizaResposta($event)"`` captura o estado do elemento no DOM no momento que o evento é disparado.
+            Quando possuimos um $event como parametro no nosso método temos que receber como parametro do tipo Event.
 - Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação.
 - @Input: Property binding do pai para filho.
 - @Output: Event binding de filho para o pai.
