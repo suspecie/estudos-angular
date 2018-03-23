@@ -106,6 +106,25 @@ Podendo também quebrar linha
 - Instalar como dependencia é uma opção boa.
 - feito isso devemos incluir o bootstrap como um style global, para isso temos que ir até o arquiv angular-cli.json e adicionar em "styles" o caminho do arquivo bootstrap.
 
+## Databinding
+- Comunicação entre o HTML(template/view) e a classe(componente) ou também entre componentes.
+- One-Way-Binding: comunicao de mao unica. 
+    - Para o Componente se comunicando com o Template podemos utilizar os recursos Property binding e String Interpolation.
+        - String interpolation (bigode bigode rs): ``` {{ data }} ```
+            Faz com que o atributo da classe seja impresso no template.
+            Permite a inclusao de atributos e expressoes em qualquer lugar do nosso template.
+        - Property Binding: ``` [property] = "data" ```
+            Faz com que um atributo do HTML tenha seu determinado valor baseado em um atributo da classe.
+            O objetivo dele é afetar atributos e elementos HTML, fazendo com que os valores sejam definidos baseado em variaveis da classe do componente.
+            ``` <img [src]="url_img"> ```
+    - Para capturar eventos do Template e utilizar no componente, utilizamos o Event binding.
+        - Event Binding: ``` (event) = "expression" ```
+            Atribuimos no HTML um determinado evento junto com uma expressao que é uma funcao que corresponde com um método da classe do componente.
+- Two-Way-Binding: comunicacao de mao dupla, ou seja se disparar uma ação do template ou do componente ambos vão reagir a esta ação.
+- @Input: Property binding do pai para filho.
+- @Output: Event binding de filho para o pai.
+
+
 
 
 
