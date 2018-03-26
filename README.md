@@ -133,11 +133,19 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
 ``<p> {{ resposta }} </p>``
 
 - @Input: Property binding do pai para filho.
+    - Decorar a variável com @Input()
+    ```  @Input()  public progresso: number = 25;```
+    - Importar o módulo do core do Angular: Input
+    - Dessa forma o meu componente possui uma variável que aceita parametros externos definidos no momento da instancia do componente.
+    - Através do Property Binding, no template do componente pai, vamos definir [filho]="pai" .
+    ``` [progresso]="progresso" ```
 - @Output: Event binding de filho para o pai.
 
 ## Mock
 - O mock contém instâncias dos objetos baseados na classe modelo.
 
+## Mais dicas
+- Quando declaramos uma variável sem incializá-la automaticamente ela passa a ter o valor undefined.
 
 
 
