@@ -103,6 +103,17 @@ Podendo também quebrar linha
     Para que nao seja criado determinado arquivo devemos passar um parametro na hora da geração
     ``` ng g c nomedocomponente --spec=false ``` nesse caso o arquivo spec n sera criado
 
+    ### Ciclo de vida dos componentes
+        - LifeCycle Hooks são métodos pre-definidos do Angular.
+        - Todos os métodos são executados após a construção do nosso componente, ou seja, logo após o constructor.
+        - Para utilizá-los é necessário importá-los do core do Angular.
+        - Realizar o implements das interfaces.
+        - ngOnChanges(): é disparado logo depois do construtor, podemos capturar as mudanças desse componente antes da inicialização do componente. Esse método é executado sempre que atributos de componentes pais são atualizados. Sempre que existe @Input() dos dados esse método é disparado.
+        - ngOnInit(): temos o componente iniciado e decorado com variaveis inputadas, ou seja antes mesmo do template da aplicação conseguimos trazer dados. O método é executado apenas uma vez quando o componente é iniciado.
+        - ngOnDestroy(): é chamado no momento que um componente deixa de ser utilizado na aplicação.
+
+
+
 ## Instalando o Bootstrap
 - http://getbootstrap.com/docs/4.0/getting-started/download/
 - Instalar como dependencia é uma opção boa.
