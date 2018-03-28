@@ -152,6 +152,15 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     - Através do Property Binding, no template do componente pai, vamos definir [filho]="pai" .
     ``` [progresso]="progresso" ```
 - @Output: Event binding de filho para o pai.
+    - O objeto do filho que contém um atributo do tipo EventEmitter junto com @Output, é retirado do componente filho e encaixado no contexto do componente pai.
+    - Fazer import EventEmitter
+    - Criar variavel instanciando EventEmitter ```public encerrarJogo = new EventEmitter();``
+    - Fazer a variavel emitir um evento de acordo com as regras de negocio, podendo tb passar um parametro para ela.
+    ``this.encerraJogo.emit('vitoria');``
+    - Para fazer esse atributo que emitiu o evento sair do contexto do componente devemos decoralo com @Output, para utiliza-lo também tem que importar do core do Angular.
+    - O proximo passo é fazer um databinding no template do componente pai.
+    ``<app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>``
+
 
 ## Diretivas
 - São funcionalidades que manipulam o comportamento de elementos HTML no DOM.
@@ -159,11 +168,19 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     - Estruturais: ngFor, ngIf.... (diretivas que criam estruturas html modificando o template)
     - Atributos: diretivas aplicadas a atributos de elementos HTML.
 
-    ### ngFor
+    ### Diretivas Estruturais
     ``<taghtml *ngFor="declararvariavel of array"/>``
     Após declararmos a tag html ela sera repetida de acordo com o numero de for.
     Também é possível acessar os atributos do objeto declarado.
     ``<taghtml *ngFor="declararvariavel of array" [src]="declararvariavel.exibeCoracao()" />``
+
+    #### ngIf
+    - No ngIf também podemos utilizar o recurso de else, ou seja podemos apontar para um determinado template que sera exibido se for false.
+    `` <div *ngIf="jogoEmAndamento; else referencia">``
+    Exemplo:
+    `` <div *ngIf="jogoEmAndamento; else fimDeJogo">``
+    Com base nessa referencia nos criamos uma outra diretiva ng-template, ela funciona como template mas sem um componente.
+    `` <ng-template #fimDeJogo></ng-template> ``
 
 ## Mock
 - O mock contém instâncias dos objetos baseados na classe modelo.
