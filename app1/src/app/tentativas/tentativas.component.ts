@@ -22,9 +22,7 @@ export class TentativasComponent implements OnInit, OnChanges {
     new Coracao(true),
   ];
 
-  constructor() {
-    console.log('tentativas ' + this.tentativas);
-  }
+  constructor() { }
 
   ngOnChanges() {
     if (this.tentativas !== this.coracoes.length) {
