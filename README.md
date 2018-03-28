@@ -119,6 +119,7 @@ Podendo também quebrar linha
             Faz com que um atributo do HTML tenha seu determinado valor baseado em um atributo da classe.
             O objetivo dele é afetar atributos e elementos HTML, fazendo com que os valores sejam definidos baseado em variaveis da classe do componente.
             ``` <img [src]="url_img"> ```
+            Assim o valor url_img é atributio a propriedade src.
     - Para capturar eventos do Template e utilizar no componente, utilizamos o Event binding.
         - Event Binding: ``` (event) = "expression" ```
             Atribuimos no HTML um determinado evento junto com uma expressao que é uma funcao que corresponde com um método da classe do componente.
@@ -140,6 +141,18 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     - Através do Property Binding, no template do componente pai, vamos definir [filho]="pai" .
     ``` [progresso]="progresso" ```
 - @Output: Event binding de filho para o pai.
+
+## Diretivas
+- São funcionalidades que manipulam o comportamento de elementos HTML no DOM.
+    - Componentes: diretivas com template.
+    - Estruturais: ngFor, ngIf.... (diretivas que criam estruturas html modificando o template)
+    - Atributos: diretivas aplicadas a atributos de elementos HTML.
+
+    ### ngFor
+    ``<taghtml *ngFor="declararvariavel of array"/>``
+    Após declararmos a tag html ela sera repetida de acordo com o numero de for.
+    Também é possível acessar os atributos do objeto declarado.
+    ``<taghtml *ngFor="declararvariavel of array" [src]="declararvariavel.exibeCoracao()" />``
 
 ## Mock
 - O mock contém instâncias dos objetos baseados na classe modelo.

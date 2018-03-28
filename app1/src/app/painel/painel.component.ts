@@ -16,6 +16,7 @@ export class PainelComponent implements OnInit {
   public rodada: number = 0;
   public rodadaFrase: Frase;
   public progresso: number = 0;
+  public tentativas: number = 3;
 
 
   constructor() {
@@ -40,7 +41,11 @@ export class PainelComponent implements OnInit {
         //limpa texto da rodada
     this.resposta = '';
     } else {
-      alert('Tradução esta errada')
+      //diminuir a variavel tentativas
+      this.tentativas--;
+      if (this.tentativas === -1) {
+        alert('Vc perdeu todas as tentativas');
+      }
     }
   }
 
