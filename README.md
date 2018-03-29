@@ -9,6 +9,9 @@ Créditos: Jorge Sant Ana https://www.udemy.com/curso-de-desenvolvimento-web-com
  - ferramenta de linha de comando que automatiza o processo de criacao.
  - comandos:  https://cli.angular.io/
  - ng new : cria um novo projeto
+    - ``ng new app2 --prefix nomedoprefixo`` ou ``ng new app2 -p nomedoprefixo`` o prefix serve para alterarmos o nome do prefixo padrão no caso do ``<app-nomedocomponente>`` ficará ``<nomedoprefixo-nomedocomponente>``
+    para alterar o prefixo depois é só acessar o arquivo ``angular-cli.json`` e alterar o prefix.
+    Não podmeos esquecer de alterar também onde o nomedoprefixo é utilizado.
  - ng server / ng serve / npm start: gera o build do projeto e vai subir um servidor para que possamos testar nossa aplicação. Este comando deverá ser rodado dentro da pasta do projeto que foi gerado.
 
 ## Atualizando Angular CLI
@@ -223,7 +226,7 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     - Ir até a aba properties, e escolher o Static website hosting, ele vai hospedar somente páginas estáticas ou seja que tiver qualquer linguagem que não funcione do lado do servidor.
     - Informar que quer o bucket se transforme em um website.
     - Clicar na aba Permissions para configurar as permissões de segurança. (Ver a documntação)
-    
+
 
 ## Mock
 - O mock contém instâncias dos objetos baseados na classe modelo.
