@@ -182,6 +182,49 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     Com base nessa referencia nos criamos uma outra diretiva ng-template, ela funciona como template mas sem um componente.
     `` <ng-template #fimDeJogo></ng-template> ``
 
+## Geração de Build 
+- Build é um rocesso que é utilizado na construção do produto final.
+    - Desenvolvimento:
+        Dentro da pasta dist terá os chuncks que foram criados.
+        Como o build é de desenvolvimento será possível ainda com este código debugar pois ele ainda é um código legível.
+    - Produção:
+        O timestamp no nome do arquivo da aplicação ajuda a não gerar cache, fazendo com que ao disponibilizar a versão nova, não existam problemas de cache por conta de uma versão antiga ja instalada.
+        Todos os arquivos serão minificados, tudo que é possível sai do código para que o projeto fique muito mais leve.
+
+    ### Como fazer:
+    - Acessar a pasta do aplicativo.
+    - Rodar o comando para gerar o build de desenvolvimento
+    ``ng build `` ou ``ng build --dev``
+    - Rodar o comando para gerar o build de producao
+    ``ng build --prod``
+    - Após a geração é criado um diretório chamado dist, que é o local padrao para onde gera o build de dev ou prod.
+
+## Deploy
+- Deploy é o processo desde o Build até a disponibilização para o usuário.
+
+    ### via http-server - distribuição de forma local para fazer testes
+    - Instalar o pacote via npm `` npm install http-server -g``
+    - Acessar a pasta dist do projeto
+    - Rodar o comando http-serve
+    - Serão gerados dois endereços, um IP externo que poderá ser disponibilizados para quem estiver dentro da mesma rede e um IP local.
+
+    ## via XAMP  - distribuição de forma local para fazer testes
+    - baixar o XAMP
+    - copiar o conteudo da pasta dist
+    - colar dentro da pasta htdocs
+    - para acessar localhost:80
+
+    ## na nuvem com Amazon AWS S3
+    - Pesquisar por S3
+    - Criar um bucket
+    - Informar um nome exemplo: app1-test-publicacao
+    - Somente Avançar
+    - Abrir o bucket e adicionar todos os arquivos da pasta dist dentro do bucket
+    - Ir até a aba properties, e escolher o Static website hosting, ele vai hospedar somente páginas estáticas ou seja que tiver qualquer linguagem que não funcione do lado do servidor.
+    - Informar que quer o bucket se transforme em um website.
+    - Clicar na aba Permissions para configurar as permissões de segurança. (Ver a documntação)
+    
+
 ## Mock
 - O mock contém instâncias dos objetos baseados na classe modelo.
 
