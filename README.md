@@ -117,10 +117,13 @@ Podendo também quebrar linha
 
 
 
-## Instalando o Bootstrap
+## Instalando o Bootstrap, Jquery e Tether
 - http://getbootstrap.com/docs/4.0/getting-started/download/
 - Instalar como dependencia é uma opção boa.
 - feito isso devemos incluir o bootstrap como um style global, para isso temos que ir até o arquiv angular-cli.json e adicionar em "styles" o caminho do arquivo bootstrap.
+- o bootstrap também depende do jquery e do tether.
+- O tether é uma biblioteca que facilita o posicionamento de elementos de forma absoluta, um exemplo de uso dele são os sites que apresentam o tutorial através de tooltips.
+- para instalar o jquery e o tether podemos utilizar o `npm instal tether --save`
 
 ## Databinding
 - Comunicação entre o HTML(template/view) e a classe(componente) ou também entre componentes.
