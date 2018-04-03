@@ -188,6 +188,33 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     Com base nessa referencia nos criamos uma outra diretiva ng-template, ela funciona como template mas sem um componente.
     `` <ng-template #fimDeJogo></ng-template> ``
 
+## Services
+- Sao classes que tem um objetivo de atender alguma necessidade especifica da aplicação.
+- Para não confundir com componente, devemos lembrar que componente faz o databing com o template, sendo assim qualquer coisa diferente disso pode ser definido como um servico.
+- Um exemplo de uso, podemos encapsular uma api de back-end em um serviço.
+- Para criar serviços utilizamos ``*.services.ts``
+- A classe deverá ter a terminação services ``export class OfertasService {}``
+
+    ### Escopo de Injeção
+    - Os serviços pode ser injetados em 3 escopos diferentes.
+    
+    #### Escopo de Módulo
+    - Injetar o serviço no AppModule, e acessar o serviço através de uma instância singleton, ou seja conseguimos acessar o serviço em todos os componentes através da mesma instancia.
+    #### Escopo de Componentes e componentes filhos
+    - Injetamos no componente e tanto o componente quanto os componentes filhos terão acesso ao serviço.
+    - Através do metado provides conseguimos, fazer a injeção do serviço no componente.
+    ``@Component(..., providers: [NomeService])``
+    - No construtor do componente devemos indicar qual será o atributo que irá receber este serviço.
+    
+    #### Escopo de somente componentes
+    - Somente o componente em específico terá acesso aquele serviço.
+
+    ### @Injectable
+    - Os serviços também podem ser injetados em outro serviço para isso é usado a função decoradora @Injectable().
+    - O @Injectable é colocado no serviço que receberá o outro serviço.
+
+
+
 ## Geração de Build 
 - Build é um rocesso que é utilizado na construção do produto final.
     - Desenvolvimento:
