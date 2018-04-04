@@ -214,6 +214,17 @@ Exemplo: no this.resposta estamos recebendo o evento do html, se voltarmos para 
     - O @Injectable é colocado no serviço que receberá o outro serviço.
 
 
+## Promisses
+- São promessas.
+- é um objeto usado para processamento assíncrono.
+
+## Processos
+
+### Síncrono
+- A continuação de um script só acontecer após a finalização do processo.
+### Assíncrono
+- Não aguarda a finalização do processo para seguir com o script.
+
 
 ## Geração de Build 
 - Build é um rocesso que é utilizado na construção do produto final.
